@@ -1470,6 +1470,7 @@ function SRIL:ShowImportExport()
         local btnImport = CreateStyledButton(importExportFrame, "Import from Text", 130, 24)
         btnImport:SetPoint("LEFT", btnExport, "RIGHT", 8, 0)
         btnImport:SetScript("OnClick", function()
+            importExportFrame.editBox:SetFocus()
             local text = importExportFrame.editBox:GetText()
             if text and text ~= "" then
                 local success, result = SRIL:ImportProfile(text)
