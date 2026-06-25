@@ -757,6 +757,8 @@ function SRIL:ShowEntryEditor(editIndex, existingEntry)
             for _, alt in ipairs(existingEntry.altItems) do
                 table.insert(altLines, string.format("%d,%d", alt.itemID or 0, alt.minCount or 1))
             end
+		else
+			table.insert(altLines,"00000,0")
         end
         entryEditor.altEdit:SetText(table.concat(altLines, "\n"))
         local iconID = existingEntry.iconID
@@ -766,7 +768,7 @@ function SRIL:ShowEntryEditor(editIndex, existingEntry)
         entryEditor.ebItemID:SetText("")
         entryEditor.ebIconID:SetText("")
         entryEditor.ebCount:SetText("")
-        entryEditor.altEdit:SetText("")
+        entryEditor.altEdit:SetText("_")
         entryEditor.iconPreview:SetTexture(134400)
         entryEditor.cbHidden:SetChecked(false)
         entryEditor.cbCharges:SetChecked(false)
