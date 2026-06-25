@@ -1,0 +1,15 @@
+## Interface: 11508
+## Title: Silly Raid Item Lists
+## Notes: Build and manage consumable checklists for raids with profiles and import/export.
+## Author: SillyBlesses
+## Version: 1.0.0
+## SavedVariables: SillyRaidItemListsDB
+
+Libs\LibStub\LibStub.lua
+Libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
+
+DefaultProfileData.lua
+Core.lua
+UI.lua
